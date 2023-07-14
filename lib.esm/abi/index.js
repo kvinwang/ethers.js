@@ -10,6 +10,7 @@
  */
 //////
 export { AbiCoder } from "./abi-coder.js";
+export * as Coders from "./coders.js";
 export { decodeBytes32String, encodeBytes32String } from "./bytes32.js";
 export { ConstructorFragment, ErrorFragment, EventFragment, FallbackFragment, Fragment, FunctionFragment, NamedFragment, ParamType, StructFragment, } from "./fragments.js";
 export { checkResultErrors, Indexed, Interface, ErrorDescription, LogDescription, TransactionDescription, Result } from "./interface.js";

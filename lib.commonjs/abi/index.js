@@ -10,10 +10,12 @@
  *  @_navTitle: ABI
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Typed = exports.Result = exports.TransactionDescription = exports.LogDescription = exports.ErrorDescription = exports.Interface = exports.Indexed = exports.checkResultErrors = exports.StructFragment = exports.ParamType = exports.NamedFragment = exports.FunctionFragment = exports.Fragment = exports.FallbackFragment = exports.EventFragment = exports.ErrorFragment = exports.ConstructorFragment = exports.encodeBytes32String = exports.decodeBytes32String = exports.AbiCoder = void 0;
+exports.Typed = exports.Result = exports.TransactionDescription = exports.LogDescription = exports.ErrorDescription = exports.Interface = exports.Indexed = exports.checkResultErrors = exports.StructFragment = exports.ParamType = exports.NamedFragment = exports.FunctionFragment = exports.Fragment = exports.FallbackFragment = exports.EventFragment = exports.ErrorFragment = exports.ConstructorFragment = exports.encodeBytes32String = exports.decodeBytes32String = exports.Coders = exports.AbiCoder = void 0;
+const tslib_1 = require("tslib");
 //////
 var abi_coder_js_1 = require("./abi-coder.js");
 Object.defineProperty(exports, "AbiCoder", { enumerable: true, get: function () { return abi_coder_js_1.AbiCoder; } });
+exports.Coders = tslib_1.__importStar(require("./coders.js"));
 var bytes32_js_1 = require("./bytes32.js");
 Object.defineProperty(exports, "decodeBytes32String", { enumerable: true, get: function () { return bytes32_js_1.decodeBytes32String; } });
 Object.defineProperty(exports, "encodeBytes32String", { enumerable: true, get: function () { return bytes32_js_1.encodeBytes32String; } });

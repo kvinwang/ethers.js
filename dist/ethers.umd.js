@@ -11491,6 +11491,28 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
         }
     }
 
+    class Coders {
+        static AddressCoder = AddressCoder;
+        static ArrayCoder = ArrayCoder;
+        static BooleanCoder = BooleanCoder;
+        static BytesCoder = BytesCoder;
+        static FixedBytesCoder = FixedBytesCoder;
+        static NullCoder = NullCoder;
+        static NumberCoder = NumberCoder;
+        static StringCoder = StringCoder;
+        static TupleCoder = TupleCoder;
+        static encode(coders, values) {
+            const coder = new TupleCoder(coders, "_");
+            const writer = new Writer();
+            coder.encode(writer, values);
+            return writer.data;
+        }
+        static decode(coders, data, loose) {
+            const coder = new TupleCoder(coders, "_");
+            return coder.decode(new Reader(data, loose));
+        }
+    }
+
     /**
      *  About bytes32 strings...
      *
@@ -23350,6 +23372,7 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
         Block: Block,
         BrowserProvider: BrowserProvider,
         CloudflareProvider: CloudflareProvider,
+        Coders: Coders,
         ConstructorFragment: ConstructorFragment,
         Contract: Contract,
         ContractEventPayload: ContractEventPayload,
@@ -23538,6 +23561,7 @@ const __$G = (typeof globalThis !== 'undefined' ? globalThis: typeof window !== 
     exports.Block = Block;
     exports.BrowserProvider = BrowserProvider;
     exports.CloudflareProvider = CloudflareProvider;
+    exports.Coders = Coders;
     exports.ConstructorFragment = ConstructorFragment;
     exports.Contract = Contract;
     exports.ContractEventPayload = ContractEventPayload;
