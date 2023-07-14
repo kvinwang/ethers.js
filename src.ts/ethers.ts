@@ -12,7 +12,7 @@ export {
     ConstructorFragment, ErrorFragment, EventFragment, Fragment, FallbackFragment, FunctionFragment, NamedFragment, ParamType, StructFragment,
 
     checkResultErrors, ErrorDescription, Indexed, Interface, LogDescription, Result, TransactionDescription,
-    Typed,
+    Typed, Coders,
 } from "./abi/index.js";
 
 export {
